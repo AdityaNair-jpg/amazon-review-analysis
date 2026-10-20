@@ -1,0 +1,5 @@
+# Rebuilt on Vercel; never uploaded
+.next
+node_modules
+*.tsbuildinfo
+.env*.local

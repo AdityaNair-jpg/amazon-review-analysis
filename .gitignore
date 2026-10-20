@@ -1,0 +1,29 @@
+# Derived data artifacts — rebuilt by pipeline/, never committed
+data/
+*.parquet
+*.duckdb
+*.duckdb.wal
+
+# Source dataset (9.87 GiB)
+kcore_5.json.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
+
+# browser-test screenshots and logs
+.playwright-mcp/
+
+# server logs written by run.py
+logs/

@@ -1,0 +1,23 @@
+# Core analytics — all already present in the system Python 3.10
+duckdb>=1.4.3
+pyarrow>=24.0.0
+numpy>=2.2.0
+pandas>=2.2.0
+scipy>=1.15.0
+scikit-learn>=1.6.0
+networkx>=3.4.0
+orjson>=3.11.0
+xxhash>=3.0.0
+tqdm>=4.67.0
+
+# Search -- query stemming, and the neural reranker on CPU (no PyTorch needed)
+nltk>=3.8
+onnxruntime>=1.17
+tokenizers>=0.15
+
+# API layer
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+
+# Tests
+pytest>=8.0.0

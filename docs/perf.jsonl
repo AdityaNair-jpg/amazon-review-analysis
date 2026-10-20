@@ -1,0 +1,133 @@
+{"stage": "01_ingest: kcore_5.json.gz -> raw/reviews.parquet", "seconds": 300.32, "peak_rss_mb": 0.0}
+{"stage": "02_fact: dimensions", "seconds": 10.22, "peak_rss_mb": 6198.7}
+{"stage": "02_fact: narrow fact table", "seconds": 15.32, "peak_rss_mb": 6198.7}
+{"stage": "03_quality: report and baselines", "seconds": 12.42, "peak_rss_mb": 1264.9}
+{"stage": "04_features: product features", "seconds": 36.34, "peak_rss_mb": 8740.6}
+{"stage": "04_features: reviewer features", "seconds": 70.1, "peak_rss_mb": 9500.8}
+{"stage": "04_features: product features", "seconds": 22.87, "peak_rss_mb": 4717.9}
+{"stage": "04_features: reviewer features", "seconds": 28.31, "peak_rss_mb": 4717.9}
+{"stage": "04_features: helpful-vote aggregates (VALIDATION ONLY)", "seconds": 0.9, "peak_rss_mb": 4717.9}
+{"stage": "05_duplicates: exact clusters on normalised text", "seconds": 28.72, "peak_rss_mb": 9173.7}
+{"stage": "06_minhash: signatures -> LSH band hashes", "seconds": 1112.02, "peak_rss_mb": 66.1}
+{"stage": "07_neardup: loose candidates (J >= 0.707)", "seconds": 2.37, "peak_rss_mb": 1816.7}
+{"stage": "07_neardup: loose candidates (J >= 0.707)", "seconds": 69.32, "peak_rss_mb": 1892.1}
+{"stage": "07_neardup: loose exact-Jaccard verification", "seconds": 41.53, "peak_rss_mb": 2231.2}
+{"stage": "07_neardup: tight candidates (J >= 0.878)", "seconds": 50.87, "peak_rss_mb": 4002.4}
+{"stage": "07_neardup: tight exact-Jaccard verification", "seconds": 34.31, "peak_rss_mb": 4002.4}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 7.98, "peak_rss_mb": 2844.7}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 0.96, "peak_rss_mb": 495.6}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 8.38, "peak_rss_mb": 4232.3}
+{"stage": "08_graph: rings (threshold sweep + connected components)", "seconds": 88.61, "peak_rss_mb": 4232.3}
+{"stage": "08_graph: product co-review projection (He et al. PNAS 2022)", "seconds": 19.95, "peak_rss_mb": 6061.6}
+{"stage": "08_graph: product centrality", "seconds": 226.51, "peak_rss_mb": 6061.6}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 8.22, "peak_rss_mb": 4230.4}
+{"stage": "08_graph: rings (threshold sweep + connected components)", "seconds": 71.51, "peak_rss_mb": 4230.4}
+{"stage": "08_graph: product co-review projection (He et al. PNAS 2022)", "seconds": 12.97, "peak_rss_mb": 8059.3}
+{"stage": "08_graph: product centrality", "seconds": 239.23, "peak_rss_mb": 8059.3}
+{"stage": "09_score: assemble feature matrix", "seconds": 3.55, "peak_rss_mb": 2221.6}
+{"stage": "09_score: collinearity cull at |rho| > 0.85", "seconds": 0.52, "peak_rss_mb": 2221.6}
+{"stage": "09_score: ECDF transform and rank aggregation", "seconds": 7.16, "peak_rss_mb": 2221.6}
+{"stage": "09_score: family agreement against a permutation null", "seconds": 0.53, "peak_rss_mb": 2221.6}
+{"stage": "09_score: write scores, contributions and histogram", "seconds": 2.33, "peak_rss_mb": 2221.6}
+{"stage": "09_score: assemble feature matrix", "seconds": 3.6, "peak_rss_mb": 2221.9}
+{"stage": "09_score: collinearity cull at |rho| > 0.85", "seconds": 2.73, "peak_rss_mb": 2221.9}
+{"stage": "09_score: ECDF transform and rank aggregation", "seconds": 6.98, "peak_rss_mb": 2221.9}
+{"stage": "09_score: family agreement against a permutation null", "seconds": 0.62, "peak_rss_mb": 2221.9}
+{"stage": "09_score: write scores, contributions and histogram", "seconds": 2.56, "peak_rss_mb": 2262.0}
+{"stage": "10_inject: sample source material from the real corpus", "seconds": 80.3, "peak_rss_mb": 245.2}
+{"stage": "10_inject: generate campaigns", "seconds": 8.97, "peak_rss_mb": 245.2}
+{"stage": "10_inject: write augmented fact, text, dim and campaign tables", "seconds": 7.55, "peak_rss_mb": 583.4}
+{"stage": "06b_minhash_synth: synthetic band hashes", "seconds": 9.93, "peak_rss_mb": 336.3}
+{"stage": "04_features: product features", "seconds": 34.86, "peak_rss_mb": 4785.4}
+{"stage": "04_features: reviewer features", "seconds": 39.89, "peak_rss_mb": 4785.4}
+{"stage": "04_features: helpful-vote aggregates (VALIDATION ONLY)", "seconds": 1.04, "peak_rss_mb": 4785.4}
+{"stage": "05_duplicates: exact clusters on normalised text", "seconds": 47.42, "peak_rss_mb": 6685.7}
+{"stage": "07_neardup: loose candidates (J >= 0.707)", "seconds": 64.77, "peak_rss_mb": 1929.4}
+{"stage": "07_neardup: loose exact-Jaccard verification", "seconds": 49.52, "peak_rss_mb": 2570.5}
+{"stage": "07_neardup: tight candidates (J >= 0.878)", "seconds": 58.32, "peak_rss_mb": 4329.8}
+{"stage": "07_neardup: tight exact-Jaccard verification", "seconds": 43.13, "peak_rss_mb": 4329.8}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 8.91, "peak_rss_mb": 4247.5}
+{"stage": "08_graph: rings (threshold sweep + connected components)", "seconds": 81.47, "peak_rss_mb": 4247.5}
+{"stage": "08_graph: product co-review projection (He et al. PNAS 2022)", "seconds": 19.3, "peak_rss_mb": 7104.9}
+{"stage": "08_graph: product centrality", "seconds": 233.57, "peak_rss_mb": 7104.9}
+{"stage": "09_score: assemble feature matrix", "seconds": 4.46, "peak_rss_mb": 2226.6}
+{"stage": "09_score: collinearity cull at |rho| > 0.85", "seconds": 2.57, "peak_rss_mb": 2226.6}
+{"stage": "09_score: ECDF transform and rank aggregation", "seconds": 6.96, "peak_rss_mb": 2226.6}
+{"stage": "09_score: family agreement against a permutation null", "seconds": 0.63, "peak_rss_mb": 2226.6}
+{"stage": "09_score: write scores, contributions and histogram", "seconds": 2.35, "peak_rss_mb": 2279.0}
+{"stage": "11_validate: V1 cross-family text check", "seconds": 9.94, "peak_rss_mb": 844.3}
+{"stage": "11_validate: V2 helpful-vote proxy AUC", "seconds": 0.58, "peak_rss_mb": 844.3}
+{"stage": "11_validate: V4 injection recall@k", "seconds": 0.75, "peak_rss_mb": 927.6}
+{"stage": "08_graph: reviewer co-review edges", "seconds": 63.06, "peak_rss_mb": 7776.1}
+{"stage": "08_graph: rings (threshold sweep + connected components)", "seconds": 390.85, "peak_rss_mb": 7776.1}
+{"stage": "08_graph: product co-review projection (He et al. PNAS 2022)", "seconds": 16.21, "peak_rss_mb": 8137.3}
+{"stage": "08_graph: product centrality", "seconds": 396.36, "peak_rss_mb": 8137.3}
+{"stage": "09_score: assemble feature matrix", "seconds": 3.87, "peak_rss_mb": 2223.6}
+{"stage": "09_score: collinearity cull at |rho| > 0.85", "seconds": 2.77, "peak_rss_mb": 2223.6}
+{"stage": "09_score: ECDF transform and rank aggregation", "seconds": 7.26, "peak_rss_mb": 2223.6}
+{"stage": "09_score: family agreement against a permutation null", "seconds": 0.67, "peak_rss_mb": 2223.6}
+{"stage": "09_score: write scores, contributions and histogram", "seconds": 4.15, "peak_rss_mb": 2318.2}
+{"stage": "10_inject: sample source material from the real corpus", "seconds": 51.49, "peak_rss_mb": 245.5}
+{"stage": "10_inject: generate campaigns", "seconds": 6.84, "peak_rss_mb": 245.5}
+{"stage": "10_inject: write augmented fact, text, dim and campaign tables", "seconds": 8.05, "peak_rss_mb": 582.4}
+{"stage": "06b_minhash_synth: synthetic band hashes", "seconds": 7.9, "peak_rss_mb": 336.2}
+{"stage": "04_features: product features", "seconds": 24.23, "peak_rss_mb": 4732.6}
+{"stage": "04_features: reviewer features", "seconds": 29.68, "peak_rss_mb": 4732.6}
+{"stage": "04_features: helpful-vote aggregates (VALIDATION ONLY)", "seconds": 0.91, "peak_rss_mb": 4732.6}
+{"stage": "05_duplicates: exact clusters on normalised text", "seconds": 29.62, "peak_rss_mb": 8402.7}
+{"stage": "07_neardup: loose candidates (J >= 0.707)", "seconds": 67.29, "peak_rss_mb": 1911.6}
+{"stage": "07_neardup: loose exact-Jaccard verification", "seconds": 47.66, "peak_rss_mb": 2569.6}
+{"stage": "09_score: assemble feature matrix", "seconds": 6.98, "peak_rss_mb": 2219.1}
+{"stage": "09_score: collinearity cull at |rho| > 0.85", "seconds": 20.59, "peak_rss_mb": 2219.1}
+{"stage": "09_score: ECDF transform and rank aggregation", "seconds": 14.63, "peak_rss_mb": 2219.1}
+{"stage": "09_score: family agreement against a permutation null", "seconds": 1.38, "peak_rss_mb": 2219.1}
+{"stage": "09_score: write scores, contributions and histogram", "seconds": 4.63, "peak_rss_mb": 2324.2}
+{"stage": "10_inject: sample source material from the real corpus", "seconds": 135.81, "peak_rss_mb": 245.0}
+{"stage": "10_inject: generate campaigns", "seconds": 16.54, "peak_rss_mb": 245.0}
+{"stage": "10_inject: write augmented fact, text, dim and campaign tables", "seconds": 16.42, "peak_rss_mb": 582.0}
+{"stage": "06b_minhash_synth: synthetic band hashes", "seconds": 24.18, "peak_rss_mb": 335.3}
+{"stage": "04_features: product features", "seconds": 47.33, "peak_rss_mb": 4723.4}
+{"stage": "04_features: reviewer features", "seconds": 59.02, "peak_rss_mb": 4723.4}
+{"stage": "04_features: helpful-vote aggregates (VALIDATION ONLY)", "seconds": 1.82, "peak_rss_mb": 4723.4}
+{"stage": "05_duplicates: exact clusters on normalised text", "seconds": 60.28, "peak_rss_mb": 6110.3}
+{"stage": "07_neardup: loose candidates (J >= 0.707)", "seconds": 130.66, "peak_rss_mb": 2079.6}
+{"stage": "07_neardup: loose exact-Jaccard verification", "seconds": 120.04, "peak_rss_mb": 2721.5}
+{"stage": "13_index: tokenise + SPIMI blocks", "seconds": 1338.25, "peak_rss_mb": 63.3}
+{"stage": "13_index: dictionary", "seconds": 10.25, "peak_rss_mb": 3645.6}
+{"stage": "13_index: merge blocks into the term-ordered index", "seconds": 636.81, "peak_rss_mb": 8808.6}
+{"stage": "13_index: document statistics", "seconds": 10.52, "peak_rss_mb": 8808.6}
+{"stage": "13_index: dictionary", "seconds": 17.65, "peak_rss_mb": 3637.7}
+{"stage": "13_index: document statistics", "seconds": 4.12, "peak_rss_mb": 3637.7}
+{"stage": "13_index: merge blocks into the term-ordered index", "seconds": 1104.89, "peak_rss_mb": 8171.8}
+{"stage": "13b_docstore: one lookup file keyed by review_sk", "seconds": 0.05, "peak_rss_mb": 50.7}
+{"stage": "13b_docstore: one lookup file keyed by review_sk", "seconds": 782.02, "peak_rss_mb": 9024.1}
+{"stage": "13b_docstore: repack at 20,000 rows per group", "seconds": 125.51, "peak_rss_mb": 1539.2}
+{"stage": "13b_docstore: docmeta at 50,000 rows per group", "seconds": 17.28, "peak_rss_mb": 617.6}
+{"stage": "13b_docstore: doctext at 5,000 rows per group", "seconds": 139.53, "peak_rss_mb": 3466.7}
+{"stage": "13c_docblob: write the flat record file", "seconds": 950.41, "peak_rss_mb": 1361.1}
+{"stage": "15_story: suspicious-only subgraph", "seconds": 0.12, "peak_rss_mb": 122.6}
+{"stage": "15_story: lay out the packs", "seconds": 1.1, "peak_rss_mb": 212.2}
+{"stage": "15_story: lay out the core", "seconds": 40.68, "peak_rss_mb": 212.2}
+{"stage": "15_story: disclosure check", "seconds": 100.94, "peak_rss_mb": 851.1}
+{"stage": "15_story: review ids for scoped search", "seconds": 0.23, "peak_rss_mb": 851.1}
+{"stage": "15_story: suspicious-only subgraph", "seconds": 0.11, "peak_rss_mb": 123.5}
+{"stage": "15_story: lay out the packs", "seconds": 1.16, "peak_rss_mb": 211.0}
+{"stage": "15_story: lay out the core", "seconds": 44.13, "peak_rss_mb": 211.0}
+{"stage": "15_story: disclosure check", "seconds": 0.02, "peak_rss_mb": 211.0}
+{"stage": "15_story: suspicious-only subgraph", "seconds": 0.11, "peak_rss_mb": 123.5}
+{"stage": "15_story: lay out the packs", "seconds": 1.07, "peak_rss_mb": 211.6}
+{"stage": "15_story: lay out the core", "seconds": 45.3, "peak_rss_mb": 211.6}
+{"stage": "15_story: disclosure check", "seconds": 149.15, "peak_rss_mb": 1195.8}
+{"stage": "15_story: review ids for scoped search", "seconds": 0.26, "peak_rss_mb": 1195.8}
+{"stage": "16_exposure: review-weighted base rate", "seconds": 0.31, "peak_rss_mb": 215.4}
+{"stage": "16_exposure: 40 searches, with and without demotion", "seconds": 25.71, "peak_rss_mb": 410.5}
+{"stage": "15_story: suspicious-only subgraph", "seconds": 0.12, "peak_rss_mb": 125.8}
+{"stage": "15_story: lay out the packs", "seconds": 1.08, "peak_rss_mb": 211.5}
+{"stage": "15_story: lay out the core", "seconds": 40.73, "peak_rss_mb": 211.5}
+{"stage": "15_story: disclosure check", "seconds": 148.53, "peak_rss_mb": 1195.7}
+{"stage": "15_story: review ids for scoped search", "seconds": 0.25, "peak_rss_mb": 1195.7}
+{"stage": "15_story: suspicious-only subgraph", "seconds": 0.14, "peak_rss_mb": 127.3}
+{"stage": "15_story: lay out the packs", "seconds": 1.1, "peak_rss_mb": 212.6}
+{"stage": "15_story: lay out the core", "seconds": 40.91, "peak_rss_mb": 212.6}
+{"stage": "15_story: disclosure check", "seconds": 152.5, "peak_rss_mb": 1197.1}
+{"stage": "15_story: review ids for scoped search", "seconds": 0.27, "peak_rss_mb": 1197.1}
